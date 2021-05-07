@@ -1,0 +1,72 @@
+html {
+    font-size: 32px;
+}
+
+body {
+    background-image: url("https://cdn.wallpapersafari.com/74/81/elUnH5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+p {
+    text-align: center;
+}
+
+.quiz_title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 5% 10% 5% 10%;
+    font-family: "Bookman Old Style", sans-serif;
+    letter-spacing: 0.1rem;
+    color: whitesmoke;
+}
+
+.cards_container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+
+.card_line {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    margin: 50px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front,.back {
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: Bahnschrift, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.front {
+    background-color: beige;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color: burlywood;
+    font-size: 1rem;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
